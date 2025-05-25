@@ -27,6 +27,10 @@ class Location {
 
     public function listLocations() {
         $result = $this->db->query("SELECT * FROM locations");
+        if ($result === false) {
+            // Query failed, return empty array or handle error
+            return array();
+        }
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 

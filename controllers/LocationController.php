@@ -25,7 +25,7 @@ class LocationController {
 
     public function listLocations() {
         // Call the Location model to retrieve all locations
-        return $this->locationModel->getAllLocations();
+        return $this->locationModel->listLocations();
     }
 
     public function listAvailableLocations() {

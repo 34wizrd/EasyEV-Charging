@@ -1,15 +1,16 @@
 <?php
-// Database configuration settings
+// Database configuration settings (for reference, not used directly)
 $host = 'localhost'; // Database host
 $username = 'root'; // Database username
-$password = ''; // Database password
-$database = 'easy_ev_charging'; // Database name
+$password = 'jq*A%lNygB@WuB^NFl'; // Database password
+$database = 'easyev_charging'; // Database name
 
-// Create connection
-$conn = new mysqli($host, $username, $password, $database);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+// Use WordPress $wpdb for database access
+// global $wpdb; // Uncomment and use $wpdb in your classes/controllers
 ?>
+
+
+<!-- Username	root
+Password	jq*A%lNygB@WuB^NFl
+Note that password carefully! It is a random password that was generated just for you. -->
+

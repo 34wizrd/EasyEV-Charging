@@ -1,26 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - EasyEV-Charging</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-</head>
-<body>
-    <div class="container">
-        <h2>Login</h2>
-        <form action="../controllers/UserController.php?action=login" method="POST">
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit">Login</button>
-        </form>
-        <p>Don't have an account? <a href="register.php">Register here</a></p>
-    </div>
-</body>
-</html>
+<?php
+// Only show messages if set by the shortcode handler
+if (!empty($message)) {
+    echo $message;
+}
+?>
+<div class="container">
+    <h2>Login</h2>
+    <form action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" method="POST">
+        <div class="form-group">
+            <label for="username">Username or Email:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <br/>
+        <button type="submit" name="easyev_login_submit">Login</button>
+    </form>
+</div>
